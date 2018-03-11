@@ -55,16 +55,15 @@ exports.sourceNodes = ({ boundActionCreators }, {
   return co(function* () {
     // Get Twitter
     let results = yield client.get("statuses/user_timeline", {
-      screen_name: q,
+      //q,
+      screen_name: 'pinku1',
       count,
       include_entities: true,
       tweet_mode,
-      result_type,
-      include_rts: false,
-      exclude_replies: true
+      result_type
     });
 
-    createNodes(results.statuses);
+    createNodes(results);
 
     if (fetchAllResults === true) {
       while (results.search_metadata.next_results) {

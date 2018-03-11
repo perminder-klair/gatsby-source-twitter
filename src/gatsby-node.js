@@ -66,7 +66,7 @@ exports.sourceNodes = (
       result_type
     });
 
-    createNodes(results.statuses);
+    createNodes(results);
 
     if (fetchAllResults === true) {
       while (results.search_metadata.next_results) {
