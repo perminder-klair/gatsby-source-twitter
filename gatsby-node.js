@@ -54,15 +54,14 @@ exports.sourceNodes = ({ boundActionCreators }, {
 
   return co(function* () {
     // Get Twitter
-    let results = yield client.get('statuses/user_timeline', {
-      // q,
+    let results = yield client.get("statuses/user_timeline", {
       screen_name: q,
       count,
       include_entities: true,
       tweet_mode,
       result_type,
       include_rts: false,
-      exclude_replies: true,
+      exclude_replies: true
     });
 
     createNodes(results.statuses);
