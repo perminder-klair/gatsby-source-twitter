@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-twitter-own",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Fetch data from Twitter API",
   "main": "index.js",
   "repository": {
